@@ -11,6 +11,16 @@
 -->
 # Ai-Hayasaka Theme
 
+## Looks
+
+<img src="screenshots/terminal_screen.png"
+     alt="terminal_screen"
+     style="margin-left: 10px;" />
+
+<img src="screenshots/vscode_screen.png"
+     alt="vscode_screen"
+     style="margin-left: 10px;" />
+
 ## Purpose
 
 Started shamelessly from `Fino` theme but with customizations I like.
