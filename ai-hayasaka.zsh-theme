@@ -83,6 +83,10 @@ local bottom_arrow='╰─╼'
 local path_printing='%c'
 # -----------------------------------------------
 
+# SPACING ---------------------------------------
+local spacing_before_cmd_prompt=' '
+# -----------------------------------------------
+
 # I don't do ruby
 function virtualenv_prompt_info {
   [[ -n ${VIRTUAL_ENV} ]] || return
@@ -104,10 +108,10 @@ function prompt_char {
 local ruby_env='$(ruby_prompt_info)'
 local git_info='$(git_prompt_info)'
 local virtualenv_info='$(virtualenv_prompt_info)'
-local prompt_char='%(?:%{${valid_command_prompt}%}$(prompt_char) :%{${invalid_prompt}%}$(prompt_char) )%{$reset_color%}'
+local prompt_char='%(?:%{${valid_command_prompt}%}$(prompt_char):%{${invalid_prompt}%}$(prompt_char))%{$reset_color%}'
 
 PROMPT="${separator_prompt}${separator}${arrow_prompt}${top_arrow} %B${path_prompt}%${kawaii_char}${path_printing}%{$reset_color%} ${git_info}${ruby_env}${virtualenv_info}
-${arrow_prompt}${bottom_arrow}${cmd_prompt}${prompt_char}%{$reset_color%}"
+${arrow_prompt}${bottom_arrow}${cmd_prompt}${prompt_char}%{$reset_color%}${spacing_before_cmd_prompt}"
 
 # KEYWORDS COLOR HERE
 ZSH_THEME_GIT_PROMPT_PREFIX="${keywords_prompt}${on_prompt}%{$reset_color%} %B${git_prompt}"
